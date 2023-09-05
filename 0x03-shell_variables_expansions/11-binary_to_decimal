@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 echo $((2#BINARY)o )
+=======
+echo $((2#BINARY)o)
+>>>>>>> 91a474ebb4b377d3862f34d9a56c95776e40a23a
