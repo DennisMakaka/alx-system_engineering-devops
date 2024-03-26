@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# Script: configure_nginx_server.sh
+# Description: Configures a new Ubuntu machine by installing Nginx, setting it to listen on port 80, and serving a page with "Hello World"
+#
+# This script automates the setup of an Nginx web server on an Ubuntu machine.
+# It performs the following steps:
+# 1. Updates and installs Nginx
+# 2. Starts the Nginx service
+# 3. Allows Nginx through the firewall
+# 4. Sets user ownership for website files
+# 5. Backs up the default index file and creates a new one with "Hello World"
+# 6. Restarts the Nginx service for changes to take effect
+#
+# Note: Ensure proper permissions and configurations are in place for successful execution.
+
+echo -e "Updating and installing Nginx.\n"
+sudo apt-get update -y -qq && \
+	 sudo apt-get install nginx -y
+
+echo -e "\nSetting up some minor stuff.\n"
+
+# Starting nginx service
+sudo service nginx start
+
+# Allowing nginx on firewall
+sudo ufw allow 'Nginx HTTP'
+
+# Give the user ownership to website files for easy editing
+sudo chown -R "$USER":"$USER" /var/www/html
+sudo chmod -R 755 /var/www
+
+# Backup default index
+cp /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian.html.bckp
+
+# Creating new index with "Hello World"
+echo -e "Hello World!" | dd status=none of=/var/www/html/index.nginx-debian.html
+
+# Restarting nginx
+sudo service nginx restart
+
+echo -e "\nCompleted. ✅\n"
+
