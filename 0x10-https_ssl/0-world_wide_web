@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Function to retrieve DNS information for a domain or subdomain
+# Parameters:
+#   $1: domain name
+#   $2: subdomain name (optional)
+print_domain_subdomain() {
+	dig "$1" | grep -A1 'ANSWER SECTION:' | sed -r "s/$1./$2/g" | awk -F" " ' NR==2 { print "The subdomain " $1 " is a " $4 " record and points to " $5 }'
+}
+
+# Check if two arguments are provided
+if [ "$#" -eq 2 ]; then
+    # Print DNS information for specified subdomain
+    print_domain_subdomain "$2.$1" "$2"
+else
+    # Print DNS information for default subdomains
+    print_domain_subdomain "www.$1" "www"
+    print_domain_subdomain "lb-01.$1" "lb-01"
+    print_domain_subdomain "web-01.$1" "web-01"
+    print_domain_subdomain "web-02.$1" "web-02"
+fi
+
