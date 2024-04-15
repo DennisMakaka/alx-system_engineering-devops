@@ -1,0 +1,44 @@
+# Understanding the Journey: What Happens When You Type `https://www.google.com` and Press Enter
+
+Have you ever wondered what happens behind the scenes when you type a web address into your browser and hit Enter? The seemingly simple act of accessing a website involves a complex interplay of technologies working together seamlessly to deliver the desired content to your screen. In this blog post, we'll embark on a journey through the inner workings of the internet, exploring each step of the process from the moment you type `https://www.google.com` into your browser to the moment the Google homepage appears before you.
+
+This question, often posed in software engineering interviews, serves as a litmus test for candidates' understanding of the web stack and its underlying technologies. From DNS resolution to load balancing mechanisms, every aspect of the web ecosystem plays a vital role in ensuring a smooth and secure browsing experience for users worldwide.
+
+## DNS Request
+
+The journey begins with the Domain Name System (DNS) request. When you type `https://www.google.com` into your browser, it needs to translate the human-readable domain name into an IP address. This process, known as DNS resolution, involves querying DNS servers to obtain the IP address associated with the domain name.
+
+## TCP/IP
+
+With the IP address in hand, the browser initiates a connection using the Transmission Control Protocol/Internet Protocol (TCP/IP). This suite of protocols governs how data is transmitted over the internet, ensuring reliable communication between the browser and the server. The TCP/IP connection involves a three-way handshake, where the client and server exchange synchronization packets to establish a connection.
+
+## Firewall
+
+As the TCP/IP connection is established, it may encounter a firewall—a network security system designed to monitor and control incoming and outgoing traffic. Firewalls play a crucial role in protecting networks from unauthorized access and malicious activities. Depending on the firewall configuration, it may filter or monitor the incoming HTTP request, potentially impacting the communication between the browser and the server.
+
+## HTTPS/SSL
+
+To ensure secure communication over the internet, the browser employs the Hypertext Transfer Protocol Secure (HTTPS) protocol, encrypted using Secure Sockets Layer/Transport Layer Security (SSL/TLS) protocols. HTTPS encrypts the data transmitted between the browser and the server, safeguarding it against eavesdropping and tampering. This encryption is especially critical when transmitting sensitive information such as login credentials or payment details.
+
+## Load Balancer
+
+Upon reaching the server, the incoming HTTP request may encounter a load balancer—a device or software that distributes incoming traffic across multiple servers. Load balancers enhance scalability, availability, and performance by evenly distributing the workload among server instances. This ensures that no single server becomes overwhelmed with requests, improving the overall reliability and responsiveness of the web application.
+
+## Web Server
+
+The HTTP request is then passed on to a web server—a software application responsible for handling HTTP requests from clients and serving web pages. Popular web server software includes Apache HTTP Server and Nginx, each offering features tailored to the needs of modern web applications. The web server processes the request, retrieves the requested resources, and generates an HTTP response to send back to the client.
+
+## Application Server
+
+In the case of dynamic web applications, the web server may pass the request to an application server—a software framework responsible for executing server-side code and generating dynamic content. Application servers, such as Node.js or Django, enable developers to build interactive and data-driven web applications by executing business logic and accessing external resources such as databases.
+
+## Database
+
+Behind the scenes, the application server may interact with a database server to retrieve or store data needed to fulfill the HTTP request. Databases, such as MySQL, PostgreSQL, or MongoDB, provide a structured mechanism for storing and querying data, allowing web applications to manage user information, content, and other persistent data.
+
+## Conclusion
+
+In conclusion, the journey from typing `https://www.google.com` into your browser to viewing the Google homepage is a fascinating exploration of the intricate technologies that power the internet. From DNS resolution to database queries, each component plays a vital role in delivering a seamless and secure browsing experience to users worldwide. By unraveling the mysteries of the web stack, we gain a deeper appreciation for the remarkable engineering feats that enable us to navigate the digital world with ease.
+
+So, the next time you type a web address into your browser and hit Enter, take a moment to marvel at the complex ecosystem of technologies working tirelessly behind the scenes to bring the internet to life.
+
