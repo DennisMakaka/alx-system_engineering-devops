@@ -1,0 +1,92 @@
+# Node modules directory
+node_modules/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# MacOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Build directories
+/build/
+dist/
+.cache/
+
+# Coverage directory used by testing tools like Jest
+coverage/
+
+# Parcel-bundler cache
+.cache/
+
+# Output of the npm pack command
+*.tgz
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Editor-specific files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Dependency directory
+jspm_packages/
+
+# Temporary directories and files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Output of 'yarn build' command
+.yarn/
+
+# JetBrains IDEs
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Other unwanted files
+*.swp
+*.swo
+
+# Lock files
+package-lock.json
+yarn.lock
+
+# Report files for performance testing
+reportWebVitals.js
+
+# Custom build output directories
+out/
+

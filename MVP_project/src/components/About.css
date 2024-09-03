@@ -1,0 +1,22 @@
+/* Styling for the About section */
+.about-section {
+    padding: 60px 20px;
+    background-color: #333;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+.about-heading {
+    font-size: 36px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    color: #50c878;
+    margin-bottom: 20px;
+}
+
+.about-paragraph {
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
